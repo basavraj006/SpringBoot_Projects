@@ -1,0 +1,9 @@
+#spring.application.name=example2
+
+spring:
+  application:
+    name: tms
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tms
+    username: postgres
+    password: abcd
