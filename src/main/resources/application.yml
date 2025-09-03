@@ -1,0 +1,12 @@
+#spring.application.name=LMS
+
+spring:
+  application:
+    name: test
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: postgres
+    password: abcd
+    
+
+
