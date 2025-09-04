@@ -3,7 +3,7 @@ package com.vizionExl.UserLogin.modal;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "users")
+@Table(name = "users")    //this is userlogin
 public class User {
     @Id
     @Column(name = "id")
