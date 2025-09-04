@@ -48,7 +48,7 @@ public class UserSevices {
         User savedPassword = optionalUser.get();
 
         if (password.getPassword() !=null){
-            savedPassword.setPassword(password.getPassword());
+            savedPassword.setPassword(passwordEncoder.encode(password.getPassword()));
         }
         return userRepository.save(savedPassword);
     }
