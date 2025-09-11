@@ -3,6 +3,7 @@ package com.RestApi.LMS.Controllers;
 import com.RestApi.LMS.module.Book;
 import com.RestApi.LMS.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -52,4 +53,25 @@ public class bookController {
         return bookService.updateBook(id, book);
     }
 
+    @PatchMapping("/{bookId}/borrow/{userId}")
+    public ResponseEntity<Book> borrowBook(@PathVariable("bookId") int bookId,@PathVariable("userId") int userId){
+        Book BorrowedBook = bookService.borrowBook(bookId,userId);
+        if (BorrowedBook!=null){
+            return ResponseEntity.ok(BorrowedBook);
+        }
+        else {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
+    @PatchMapping("/{bookId}/return")
+    public ResponseEntity<Book> returnBook(@PathVariable int bookId){
+        Book ReturnedBook= bookService.returnBook(bookId);
+        if (ReturnedBook!=null){
+            return ResponseEntity.ok(ReturnedBook);
+        }
+        else {
+            return ResponseEntity.badRequest().build();
+        }
+    }
 }

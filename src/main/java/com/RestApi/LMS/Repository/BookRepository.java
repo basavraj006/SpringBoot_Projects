@@ -1,4 +1,4 @@
-package com.RestApi.LMS.dao;
+package com.RestApi.LMS.Repository;
 
 import com.RestApi.LMS.module.Book;
 import org.springframework.data.jpa.repository.JpaRepository;

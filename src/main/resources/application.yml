@@ -2,9 +2,9 @@
 
 spring:
   application:
-    name: test
+    name: lms
   datasource:
-    url: jdbc:postgresql://localhost:5432/test
+    url: jdbc:postgresql://localhost:5432/lms
     username: postgres
     password: abcd
     
